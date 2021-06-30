@@ -27,8 +27,8 @@ logging.basicConfig(level=logging.INFO)
 async def parser(url):
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
-            html = await response.json()
-            return html
+            dict_response = await response.json()
+            return dict_response
 
 
 async def hero_information(message, hero):
@@ -86,9 +86,8 @@ async def usual_answers(message: types.Message):
 
 @dp.message_handler(commands="canDo")
 async def can_do(message: types.Message):
-    answer = await parser(URL)
     await message.answer(
-        f'I can tell you about - /{", /".join([_.replace("episodes", "season") for _ in answer.keys()])}')
+        f'I can tell you about - /characters, /season, /quotes, /deaths')
 
 
 @dp.message_handler(commands="characters")
