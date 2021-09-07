@@ -1,4 +1,4 @@
-# Telegramm Bot BrBa API
+# Telegramm bot BrBa API
 ## Description
 
 Asynchronous bot for telegram that allows you to get information on the TV series breaking bad using the API
