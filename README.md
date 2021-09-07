@@ -3,7 +3,7 @@
 
 Asynchronous bot for telegram that allows you to get information on the TV series breaking bad using the API
 ---
-## Установка
+## Installation
 ```
 pip install -r requirments.txt
 ```
