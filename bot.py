@@ -124,7 +124,8 @@ async def quotes(message: types.Message):
     quotes = await parser(URL + 'quotes')
     if message.text[8:] in [quote['author'] for quote in quotes]:
         for quote in quotes:
-            if quote['author'] == message.text[8:] and quote['series'] == 'Breaking Bad':
+            if quote['author'] == message.text[8:] \
+                    and quote['series'] == 'Breaking Bad':
                 await quote_information(message, quote)
     else:
         answer = set()
